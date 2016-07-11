@@ -1,0 +1,38 @@
+The New MPG Predictor App
+========================================================
+author: Robb Fritz
+date: July 8, 2016
+autosize: true
+
+The New MPG Predictor App
+========================================================
+
+For your ease of use, we have created a new app that allows you to gauge the affect of four separate predictors on a car's MPG. 
+
+The predictors covered by this app are as follows:
+- Displacement
+- The weight of the car
+- The 1/4 mile time of the car
+- The car's gross horsepower
+
+Using the App
+========================================================
+
+After selecting the chosen predictor with a simple dropdown menu, you will be immediately presented with a regression plot, like the following plot using a car's weight as the predictor:
+
+```{r, echo = FALSE}
+dat = mtcars
+plot(dat$wt, dat$mpg, pch = 16, cex = 1.3, col = "blue", , xlab = "Car Weight (1000 lbs)", ylab = "MPG", main = "MPG vs. Car Weight")
+                                        fit <- lm(mpg~wt, data = dat)
+                                        abline(fit)
+```
+
+Where to Find the App
+========================================================
+You can find this new app at the following URL:
+<https://robbfritz.shinyapps.io/Project/>
+
+Further Notes
+========================================================
+- The dataset used for this app is the Motor Trend Car Road Tests dataset, found in the basic 'datasets' library in R. 
+- The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
